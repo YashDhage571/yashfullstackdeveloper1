@@ -2,210 +2,289 @@
 <html lang="en">
 
 <head>
-
-    <title>Document</title>
+    <title>Registration Form. </title>
     <style>
-        .body {
+        main {
+
+            color: white;
+         
             
-            
-            
-            margin-left: 300px;
-            font-size: x-large;
-            margin-top: 200px;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 2%;
-       
-            flex-direction: column; 
            
+
         }
 
-        .first {
-            background-color: aqua;
-            font-size: large;
+        .background {
+            background-color: #604CC3;
+            color: white;
+            padding-left: 3%;
+          
         }
 
-        .last {
-            background-color: aqua;
-            font-size: large;
+        table {
+
+            color: white;
+         
+
         }
 
-        .DOB {
-            background-color: aqua;
-            font-size: large;
-        }
-
-        .contact {
-            background-color: aqua;
-            font-size: large;
-        }
-
-        .familycontact {
-            background-color: aqua;
-            font-size: large;
-        }
-
-        .email {
-            background-color: aqua;
-            font-size: large;
-        }
-
-        .password {
-            background-color: aqua;
-            font-size: large;
-        }
-        .Education{
-            font-size: 19px;
-        }
         
+        form {
+            height: auto;
+            width: 53vw;
+            margin-left: 20%;
+           
+
+
+
+        }
+
+        .color:hover {
+            border-color: rgb(0, 0, 0);
+            background-color: darkgreen;
+            font-size: 15px;
+
+
+        }
+
+        .color:hover {
+            border-color: black;
+            background-color: lawngreen;
+            font-size: 15px;
+
+        }
+    .section{
+        border-style: solid;
+        border-width: 10px;
+        border-radius: 10px;
+    }
     </style>
-    
 </head>
 
-<body >  
-   
-    <form class="body"  ></body>
-        <fieldset style="height:60% ; width: 45;color: black; border: solid;border-color: black  ; border-width: 10px;">
-            <legend style="color: crimson; text-align: center;">Welcome To MIT Pune University.</legend>
-            <!-- Pune University. -->
-            <br>
-            <img src="https://admissions.mitwpu.edu.in/frontend/assets/images/logo.svg" height="120px" width="120px" style="margin-left: 550px; margin-bottom: -120px;" >
-            <br>
-            <label style="color: forestgreen;">* Personal Details.</label>
-            <!-- Personal Details. -->
-            <br>
-            <br>
-            <label>First Name:-</label>
-            <input type="text" class="first">
-            <!-- First Name -->
-            <br>
-            <br>
-            <label>Last Name:-</label>
-            <input type="text" class="last">
-            <!-- Last Name. -->
-            <br><br>
-            <label>Date of Birth:-</label>
-            <input type="date" class="DOB">
-            <!-- Date of Birth. -->
-            <br><br>
-            <label>Contact No:-</label>
-            <input type="number" class="contact">
-            <!-- Contact NO -->
-            <br><br>
-            <label> Family Contact No:-</label>
-            <input type="number" class=" familycontact">
-            <!-- Family Contact Number -->
-            <br><br>
-            <label>E.mail Id:-</label>
-            <input type="email" class="email ">
-            <!-- Email Id  -->
-            <br><br>
-            <label>Password:-</label>
-            <input type="password" class="password ">
-            <!-- Password. -->
-            <br>
-            <hr>
-            <div class="Education">
-            <label style="color: green;">* Education. &nbsp;</label>
-            <br>
-            <br>
+<body>
+    <br><br>
+    <u style="color: #604CC3;">
+    <h1 style="text-align: center; color: #604CC3;">*  STUDENT'S  &nbsp; REGISTRATION  &nbsp; FORM *</h1>
+</u>
+    <form class="section">
 
-            <label><img
-                        src="https://t4.ftcdn.net/jpg/03/11/24/19/360_F_311241990_vHZLXvq2CiT0ZHTl22HDpUix7wWGi5LU.jpg"
-                        height="40px" width="40px"> &nbsp;10th.</label>
-            <input type="radio" name="a">
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <!-- 10th -->
-
-            <label><img
-                        src="https://www.shutterstock.com/image-vector/logo-design-emblem-style-12th-260nw-2243725501.jpg"
-                        height="35px" width="35px"> &nbsp; 12th.</label>
-            <input type="radio" name="a">
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <!-- 12th. -->
-
-            <label><img src="https://cdn-icons-png.freepik.com/512/4831/4831234.png" height="35px" width="35px">
-                    &nbsp; &nbsp; Graduation.</label>
-            <input type="radio" name="a">
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <!-- Graduation -->
-
-            <label> <img
-                        src="https://png.pngtree.com/png-clipart/20190516/original/pngtree-graduation-icon-png-image_3875538.jpg"
-                        height="35px" width="35px">&nbsp;&nbsp; Post Graduation</label>
-            <input type="radio" name="a" class="">
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <!-- Post Graduation. -->
-        </div>
-        <hr>
-        <label style="color: green;">* Select Program Applying For</label>
-        <br>
-        <br>
-       
-       <label> Select Branch:- </label>  
-        <select style="color: blue; background-color: aqua;">
-<option>Computer Science (Cs)</option>
-<option>Information Technology (It)</option>
-<option>Civil Engineering</option>
-<option>Computer Science In (AI)</option>
-        </select>
-        &nbsp;  &nbsp;  &nbsp;  &nbsp; 
-
-        <label style="color: green;"></label>
-      
-        <label>Select State:-</label>
-        <select style="color: blue; background-color: aqua;">
-            <option>Maharashtra.</option>
-            <option>Madhya Pradesh.</option>
-            <option>Andhra Pradesh.</option>
-            <option>Arunachal Pradesh.</option>
-            <option>Assam.</option>
-            <option>Bihar.</option>
-            <option>Uttar Pradesh.</option>
-        </select>
-
-
-
-    </fieldset>
-    
+            
         
+        <fieldset class="background" style="  border-style: solid ;">
+            <br><br>
+
+            <!-- Students Registration Form -->
+
+            <label>FIRST NAME :-</label>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp;
+            <input style="width: 200px; height: 25px;" type="text"> (Max 30 Characters a-z and A-Z)
+            <!-- First Name -->
+            <br><br><br>
+
+            <label>LAST NAME :- </label>   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp;
+            <input style="width: 200px; height: 25px;" type="text"> (Max 30 Characters a-z and A-Z)
+            <!-- Last Name -->
+            <br><br><br>
+
+            <label>DATE OF BIRTH :- </label> &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp;
+            <input style="width: 200px; height: 25px;" type="date" width="180px">
+            <br><br><br>
+            <!-- Date of Birth -->
+
+            <label> EMAIL ID :- </label>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp;
+            <input style="width: 200px; height: 25px;" type="email">
+            <br><br><br>
+            <!-- Eamil ID  -->
+
+
+            <label> MOBILE NUMBER :- </label>   &nbsp;
+            &nbsp; &nbsp;
+            <input style="width: 200px; height: 25px;" type="number"> (10 Digit Number)
+            <br><br><br>
+            <!-- Contact Number -->
+
+            <label>GENDER:- </label>
+             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp;
+
+            <label>MALE </label> <input type="radio" name="d">
+            <label>FEMALE </label> <input type="radio" name="d">
+            <!--Gender -->
+            <br><br>
+
+            <label> ADDRESS :- </label>  &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <input style="width:350px; height: 70px;">
+            <!-- Address -->
+            <br><br><br>
+
+
+            <label>CITY :- </label>  &nbsp; &nbsp; &nbsp;
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp;
+            <input style="width:200px; height: 25px;"> (Max 30 Characters a-z and A-Z)
+            <!-- City. -->
+            <br><br><br>
+
+            <label>PINCODE :- </label> &nbsp; &nbsp; &nbsp;
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+            <input style="width:200px; height: 25px;" type="number"> (6 Digit Number.)
+            <!-- Pin Code -->
+            <br> <br><br>
+
+            <label>STATE :- </label>&nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <select style="width: 200px; height:25px;">
+                <option>Maharashtra </option>
+                <option>Asam</option>
+                <option>Odisha</option>
+                <option>Uttar Pradesh</option>
+                <option>Arunachal Pradesh</option>
+                (Max 30 Characters a-z and A-Z.)
+            </select>
+            <!-- STATE -->
+            <br><br><br>
+
+
+            <label>COUNTRY :- </label>  &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp;
+            <select style="width: 200px; height: 25px;">
+                <option>India </option>
+                <option>Malasiya</option>
+                <option>Australia</option>
+                <option>South Africa </option>
+                <option>China</option>
+                <option>Indoneshia</option>
+
+            </select>
+            (Max 30 Characters a-z and A-Z)
+            <!--Country. -->
+            <br><br><br>
+
+            <label> HOBBIES :- </label> &nbsp; &nbsp; &nbsp;
+           &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+
+            <label>Drawaing</label>
+            <input type="checkbox">
+            &nbsp; &nbsp;
+
+            <label>Singing</label>
+            <input type="checkbox">
+            &nbsp; &nbsp;
+
+            <label>Dancing</label>
+            <input type="checkbox">
+            &nbsp; &nbsp;
+
+            <label>Sketching</label>
+            <input type="checkbox">
+            &nbsp; &nbsp;
+
+            <label>Ohters</label>
+            <input type="checkbox">
+            &nbsp; &nbsp;
+            <!-- Hobbies -->
+            <br><br><br>
+
+            <div class="">
+
+                <div>
+
+                    <label>QUALIFICATION:-</labeL>
+                     &nbsp; &nbsp; &nbsp;
+                    <!-- Qualification. -->
+                    
+                </div>
+
+                <div>
+                    <table>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        <tr>
+                            <th>Sr.No</th>  
+                            <th>Examinationas.</th>
+                            <th>Board.</th>
+                            <th>Percentage.</th>
+                            <th>Year of Passing.</th>
+
+                        </tr>
+                        <tr>
+                            <td>01.</td>
+                            <td>Class X.</td>
+                            <td>
+                                <input type="text">
+                            </td>
+
+                            <td>
+                                <input type="text">
+                            </td>
+                            <td> <input type="text"></td>
+
+                        </tr>
+                        <tr>
+                            <td>02.</td>
+                            <td>Class XII.</td>
+                            <td> <input type="text"></td>
+                            <td> <input type="text"></td>
+                            <td> <input type="text"></td>
+
+
+                        </tr>
+                        <tr>
+                            <td>03.</td>
+                            <td>Graduation.</td>
+                            <td> <input type="text"></td>
+                            <td> <input type="text"></td>
+                            <td> <input type="text"></td>
+
+                        </tr>
+                        <tr>
+                            <td>04.</td>
+                            <td>Masters.</td>
+                            <td> <input type="text"></td>
+                            <td> <input type="text"></td>
+                            <td> <input type="text"></td>
+
+                        </tr>
+                        <tr>
+                            <td>&nbsp;&nbsp;</td>
+                            <td>&nbsp;&nbsp;</td>
+                            <td style="text-align: center;">(10 Char Max)</td>
+                            <td style="text-align: center;">(upto 2 Decimal.) </td>
+                        </tr>
 
 
 
+                </div>
 
+            </div>
 
+            </table>
+            <br><br>
+            <label>COURSES APPLIED FOR :-</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label>BCA</label>
+            <input type="radio" name="k">
+            <label>B.com</label>
+            <input type="radio" name="k">
+            <label>B.sc</label>
+            <input type="radio" name="k">
+            <label>B.A</label>
+            <input type="radio" name="k">
 
+            <br>
+            <br>
+            <br>
 
-
-
-
-
+            <button class="color" style="text-align: center;margin-left: 40%;">Submit</button> <button class="color"
+                style="text-align: center; ;">Reset</button>
 
         </fieldset>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     </form>
 
