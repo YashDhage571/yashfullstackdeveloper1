@@ -1,0 +1,48 @@
+*{ margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Playwrite DE Grund", cursive;
+    text-decoration: none;
+    list-style: none;
+
+}
+.header{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 35px 12%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    font-size: 25px;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+.logo:hover{
+    color: aqua;
+    text-shadow: 0 0 25px aqua
+    0 0 50px aqua;
+    transform: scale(1.1);
+
+}
+.span{
+    color: aqua;
+}
+
+.navbar a{
+        font-size: 18px;
+        color: white;
+        font-weight: 500;
+        margin: 0 20px;
+        border-bottom: 3px solid transparent;
+        transition: 0.3 ease;
+        
+
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+    <style>
+        .main-container {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: row;
+            border-style: solid;
+
+
+        }
+
+        .section-one {
+            height: 100vh;
+            width: 100%;
+            background-color:lightgray;
+            border-style: solid;
+        }
+
+        .section-two {
+            height: 100vh;
+            width: 100vw;
+            background-color: lightskyblue;
+            display: flex;
+            flex-direction: column;
+            border-style: solid;
+        }
+
+      
+
+        .iframe {
+            height: 50vh;
+            width: 50vw;
+            border-style: solid;
+
+        }
+        .video{
+            height: 100%;
+            width:100%;
+            background-color: white;
+        }
+
+      
+
+     
+        .iframe-two{
+            height: 100vh;
+            width: 50vw;
+           
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+
+        <div class="section-one">
+            <audio src="./Rocky Arrives In Bombay BGM.mp3" controls></audio>
+            <iframe class="video" src="./SampleVideo_1280x720_30mb.mp4" frameborder="0"></iframe>
+            
+        </div>
+       
+        <div class="section-two">
+
+            <div class="section-two-one">
+
+                <iframe class="iframe" src="webpage.html" frameborder="0"></iframe>
+                <iframe class="iframe-two" src="" frameborder="0"></iframe>
+            </div>
+
+        </div>
+    </div>
+   
+
+</body>
+
+</html>

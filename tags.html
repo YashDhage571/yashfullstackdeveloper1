@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Tags</title>
+    <style>
+        *{
+            background-color:black;
+        }
+        
+
+        .another-name{
+           
+            border-style: double;
+            border-color: white;
+            border-width: 5px;
+        }
+        body {
+           
+            color: white;
+            padding: 2%;
+            font-size: 35px;
+        }
+
+        
+
+        #professional { 
+            color: orangered;
+        }
+
+        p[draggable] {
+
+            color: white;
+        }
+
+        p:hover {
+            color: #009FBD;
+        }
+        .text:hover{
+            color:black;
+            background-color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <p>My Self  <span class="name  another-name"><span class="text">Yash Dhage.</span></span></p>
+    <p>I'm an <span id="professional">Software Engineer.</span></p>
+
+    <p draggable="true">I'm an <span id="professional"></span></p>
+
+
+</body>
+
+</html>

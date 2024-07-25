@@ -1,45 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>      
+<head>
     <style>
         table {
-            width: 90vw;
-            height: 80vh;
+            width: 100vw;
+            height: 100vh;
             background-color: black;
             text-align: center;
-           
+            margin: 0px;
         }
-        
-        .table-row{
-            width: 90px;
-            height: 100px;
+
+        .table-row {
+            width: 40vw;
+            height:40vh ;
             background-color: lightseagreen;
+        
            
         }
-        
+
+        .table-row-one {
+            height: 40vh;
+            width: 40vw;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
     </style>
 
-    <title>Document</title>
+    <title>Colours</title>
 </head>
 
-<body style="margin: 0px;"> 
+<body style="margin: 0px;">
     <table>
         <tr class="table-row">
-        <td>A</td>
-        <td>F</td>
-        <td>N</td>
-    </tr>
-        <tr class="table-row">
-        <td>H</td>
-        <td>J</td>
-        <td>L</td>
-    </tr>
-        <tr class="table-row">
-        <td>W</td>   
-        <td>T</td>
-        <td>U</td>
-    </tr>
+            <td style="background-color: gray;"><a href="#section-one">Home</a></td>
+            <td style="background-color: lightskyblue;"><a href="#section-two">Projects.</a></td>
+            <td style="background-color: lightcoral;"><a href="#section-three"> Skills</a></td>
+            <td style="background-color: lightgreen;"><a href="#section-four">About</a></td>
+           
+        </tr>
+
+        <tr class="table-row-one" id="section-one">
+            <td colspan="4" style="background-color:aqua;"><b>Home.</b></td>
+        </tr>
+
+        <tr class="table-row-one" id="section-two"> 
+            <td colspan="4" style="background-color:lightcyan;"><b>Projects.</b></td>
+        </tr>
+
+        <tr class="table-row-one" id="section-three"> 
+            <td colspan="4" style="background-color:lightsteelblue;"><b>Skills.</b></td>
+        </tr>
+       
+       
+
+        <tr class="table-row-one" id="section-four">
+            <td style="background-color: gray;">V</td>
+            <td style="background-color: lightskyblue;">X</td>
+            <td style=" background-color:lightcoral ;">Y</td>
+            <td style="background-color:lightgreen ;">Z</td>
+            
+        </tr>
 
     </table>
 
