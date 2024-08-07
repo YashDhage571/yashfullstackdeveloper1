@@ -1,349 +1,778 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio website of Yash Dhage, Full Stack Developer">
-    <meta name="author" content="Yash Dhage">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Yash Dhage - Full Stack Developer</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-    <!-- External Stylesheet -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 
-    <!-- Favicon -->
-    <link rel="icon" href="https://cdn-icons-png.freepik.com/256/8513/8513347.png?semt=ais_hybrid"
-        style="border-radius: 50%;">
+  <title>Satyanam-Juice Centre</title>
+  <style>
+    .buttn {
+      font-size: 20px;
+      background-color: #ffa30f;
+      ;
+      color: #fff;
+      padding: 13px 0px;
+      width: 100%;
+      max-width: 190px;
+      text-align: center;
+      display: inline-block;
+      transition: ease-in all 0.5s;
+      z-index: 9999;
+      position: relative;
+      font-weight: 300;
+      height: 7vh;
+    }
 
-    <!-- Internal Styles -->
-    <style>
-        .html {
-            scroll-behavior: smooth;
-        }
+    .buttn:hover {
+      background-color: #440e62;
+      color: white;
+    }
 
-        .main {
-            background-color: #000;
-            color: aliceblue;
-            height: 100vh;
-            width: 100vw;
-
-        }
-
-
-
-
-        body {
-            font-family: "Crimson Text", serif;
-            background-color: black;
-            line-height: 1.6;
-        }
-
-        .main-container {
-            height: 100vh;
-            max-width: 90vw;
-            margin: 0 auto;
-            padding: 0 20px;
-            font-family: "Titillium Web", sans-serif;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            width: 100%;
-        }
-
-        .logo-one h1 {
-            font-size: 24px;
-        }
-
-        .upper-boxes {
-            display: flex;
-            justify-content: space-between;
-            gap: 80px;
-            color: white;
-        }
-
-        .upper-boxes a {
-            color: white;
-            text-decoration: none;
-            position: relative;
-        }
-
-        .upper-boxes h2::before {
-            content: "";
-            position: absolute;
-            bottom: -3px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: rgba(11, 227, 251, 0.939);
-            transform: scaleX(0);
-            transform-origin: right;
-            transition: transform 0.3s ease;
-        }
-
-        .upper-boxes h2:hover {
-            color: rgba(11, 227, 251, 0.939);
-            transform: translateY(-3px);
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-        }
-
-        .upper-boxes h2:hover::before {
-            transform: scaleX(1);
-            transform-origin: left;
-        }
-
-        .profile-section {
-            text-align: center;
-            padding: 50px 0;
-            margin-bottom: 15%;
-        }
-
-        .profile-picture {
-            width: 200px;
-            height: 190px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-            transition: box-shadow 0.3s ease;
-        }
-
-        .profile-picture:hover {
-            box-shadow: 0 0 20px rgba(11, 227, 251, 0.939);
-        }
-
-        .profile-name {
-
-            margin-bottom: 10px;
-            font-size: 36px;
-            transition: transform 0.3s ease;
-        }
-
-        .profile-title {
-            margin-bottom: 20px;
-        }
-
-        .profile-description {
-            max-width: 600px;
-            margin: 0 auto 30px;
-        }
-
-        .social-media {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            font-size: 25px;
-            margin-top: 20px;
-        }
-
-        .social-icon {
-            font-size: 35px;
-            color: rgba(11, 227, 251, 0.939);
-            transition: 0.4s ease;
-            text-decoration: none;
+    .sub-container {
+      height: 100vh;
+      width: auto;
+      background-image: url(./assets/image/banner_bottom_cross.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-top: -35%;
 
 
-        }
 
-        .social-icon:hover {
-            transform: scale(1.3);
-        }
+    }
 
-        .content-section {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 50px;
-            flex-wrap: wrap;
-
-        }
-
-        .content-box {
-            flex: 1;
-            padding: 20px;
-            border: 1px solid rgb(0, 229, 255);
-            margin: 0 10px;
-            margin-bottom: 5%;
-            text-align: center;
-            transition: transform 0.4s ease;
-        }
-
-        .content-box:hover {
-            transform: scale(1.05);
-
-        }
-
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .upper-boxes {
-                margin-top: 20px;
-                flex-wrap: wrap;
-            }
-
-            .content-section {
-                flex-direction: column;
-            }
-
-            .content-box {
-                margin: 10px;
-            }
-        }
-
-        .content-one {
-
-            background-color: rgba(11, 227, 251, 0.939);
-            width: 100px;
-            border-radius: 10px;
-            height: 40px;
-            color: #000;
-            text-decoration: none;
-
-        }
-
-        .content-one:hover {
-
-            transform: scale(1.1);
-            transition: transform 0.4s ease;
-        }
-
-        .about-section {
-            display: flex;
-            flex-direction: row;
-            gap: 40px;
-        }
-
-        .content-two {
-            height: 33vh;
-            width: 70vw;
-
-        }
-
-        .content-three {
-            height: 30vh;
-            width: 30vw;
-            border-style: solid;
-        }
-
-        .content-four {
-            height: 30vh;
-            width: 30vw;
-            border-style: solid;
-        }
-
-        .main-two {
-            height: 100vh;
-            width: 100vw;
-            background-color: #000;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-        }
-
-        .first-box {
-            height: 50vh;
-            width: 40vw;
-            color: aliceblue;
+    .sub-two {
+      height: 80vh;
+      width: auto;
+      background-image: url(./assets/image/banner_bottom_cross.png);
+      background-repeat: no-repeat;
+      background-size: cover;
 
 
-        }
 
-        .second-box {
-            height: 50vh;
-            width: 40vw;
-            color: aliceblue;
+    }
 
-        }
+    .sub-three {
+      height: 100vh;
+      width: auto;
+      background-image: url(./assets/image/banner_centre.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      flex-direction: row;
 
-        .img {
-            height: 300px;
-            width: 300px;
-            border-radius: 50%;
 
-        }
-    </style>
+    }
+
+    .sub-three-one {
+
+      height: 90vh;
+      width: 55vw;
+      background-image: url(file:///Users/enjoy_28_b/Downloads/fresh-master/images/about.png);
+      margin-left: 1%;
+
+
+    }
+
+    .sub-three-two {
+
+      height: 60vh;
+      width: 30vw;
+      margin-left: 5%;
+      margin-top: 10%;
+
+
+    }
+
+    .sub-four {
+      height: 110vh;
+      width: auto;
+      background-image: url(./assets/image/banner_centre.jpg);
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+
+    .sub-four-one {
+      height: 35vh;
+      width: 25vw;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      border-radius: 20px;
+      background-image: url(file:///Users/enjoy_28_b/Downloads/fresh-master/images/our1.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+
+    }
+
+    .sub-four-two {
+      height: 35vh;
+      width: 25vw;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      background-image: url(https://www.seekpng.com/png/detail/245-2451427_lime-juice.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      margin-top: 20%;
+      border-radius: 20px;
+
+    }
+
+    .sub-four-three {
+      height: 35vh;
+      width: 25vw;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      background-image: url(https://t3.ftcdn.net/jpg/08/37/54/28/360_F_837542883_uLwTgEGJF4AhoPsmhaOzjHIF3xlVVlOJ.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+
+      border-radius: 20px;
+
+    }
+
+    * .sub-four-fifth {
+      height: 35vh;
+      width: 25vw;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      background-image: url(file:///Users/enjoy_28_b/Downloads/fresh-master/images/our3.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      border-radius: 20px;
+      margin-top: -20%;
+      margin-right: 5%;
+
+    }
+
+    .sub-four-sixth {
+      height: 35vh;
+      width: 25vw;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      background-image: url(file:///Users/enjoy_28_b/Downloads/fresh-master/images/our5.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      border-radius: 20px;
+      margin-top: -20%;
+      margin-left: 20%;
+
+    }
+
+    .price-one {
+      height: 30vh;
+      width: 25vw;
+      margin-top: 90%;
+    }
+
+    .price-two {
+      height: 30vh;
+      width: 25vw;
+      margin-top: 90%;
+    }
+
+    .price-three {
+      height: 30vh;
+      width: 25vw;
+      margin-top: 90%;
+    }
+
+    .price-fourth {
+      height: 30vh;
+      width: 25vw;
+      border: solid;
+
+    }
+
+    .price-five {
+      height: 30vh;
+      width: 25vw;
+      margin-top: 90%;
+
+    }
+
+    .price-six {
+      height: 30vh;
+      width: 25vw;
+      margin-top: 90%;
+
+    }
+
+    .sub-main-two {
+      height: 50vh;
+      width: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      background-image: url(./assets/image/banner_centre.jpg);
+    }
+
+    .sub-main-three {
+      height: 50vh;
+      width: auto;
+
+      display: flex;
+      flex-direction: row;
+    }
+
+    .main-three-one {
+      height: 80%;
+
+      width: 40vw;
+      margin-left: 55%;
+      background-image: url(file:///Users/enjoy_28_b/Downloads/fresh-master/images/con_top.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+
+
+    }
+
+    .sub-main-three-two {
+      height: auto;
+      width: auto;
+      background: #440e62;
+
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: white;
+      margin-top: -4%;
+
+    }
+
+    .sub-main-three-second {
+      height: 15vh;
+      width: auto;
+      padding: 2%;
+
+
+    }
+
+    .sub-main-three-third {
+      height: 80vh;
+      width: auto;
+
+    }
+
+    .col-md-12 {
+      position: relative;
+      width: 100%;
+      min-height: 1px;
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+
+    .contactus {
+      border: inherit;
+      padding: 0px 10px;
+      margin-bottom: 20px;
+      width: 70%;
+      height: 45px;
+      background: transparent;
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: normal;
+      border-bottom: #ffffff solid 1px;
+      margin-top: 7%;
+      margin-left: 20%;
+    }
+
+    .email {
+      border: inherit;
+      padding: 0px 10px;
+      margin-bottom: 20px;
+      width: 30%;
+      height: 45px;
+      background: transparent;
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: normal;
+      border-bottom: #ffffff solid 1px;
+      margin-top: 2%;
+      margin-left: 20%;
+    }
+
+    .phone {
+      border: inherit;
+      padding: 0px 10px;
+      margin-bottom: 20px;
+      width: 30%;
+      height: 45px;
+      background: transparent;
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: normal;
+      border-bottom: #ffffff solid 1px;
+      margin-top: 2%;
+      margin-left: 20%;
+    }
+
+    .message {
+      border: inherit;
+      padding: 0px 10px;
+      margin-bottom: 20px;
+      width: 70%;
+      height: 45px;
+      background: transparent;
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: normal;
+      border-bottom: #ffffff solid 1px;
+      margin-top: 2%;
+      margin-left: 20%;
+    }
+
+    ::placeholder {
+      color: white;
+      opacity: 1;
+      /* Firefox */
+    }
+
+    ::-ms-input-placeholder {
+      /* Edge 12 -18 */
+      color: white;
+    }
+
+    .send_btn {
+      font-size: 20px;
+      transition: ease-in all 0.5s;
+      background-color: #ee3112;
+      color: #fff;
+      margin-top: -6%;
+      max-width: 190px;
+      font-weight: 500;
+      margin-left: 3%;
+      display: block;
+
+      float: right;
+      border-radius: 30px;
+      text-transform: uppercase;
+      z-index: 9999;
+      position: relative;
+
+      border: none;
+      height: 7vh;
+      width: 15vw;
+    }
+
+    .send_btn:hover {
+      background-color: rgb(255, 255, 37);
+      color: black;
+
+    }
+
+    .img-area-one {
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+    }
+
+    .img-area-two {
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+    }
+
+    .img-area-three {
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+    }
+
+    .sub-main-three-fourth {
+      height: 15vh;
+      width: 75vw;
+
+      margin-top: 3%;
+      margin-left: 18%;
+      display: flex;
+      flex-direction: row;
+
+    }
+
+    .div-one {
+      height: 7vh;
+      width: 10vw;
+
+      padding: 1%;
+      text-align: center;
+    }
+
+    .div-two {
+      height: 7vh;
+      width: 15vw;
+
+      padding: 1%;
+      text-align: center;
+    }
+
+    .div-three {
+      height: 7vh;
+      width: 18vw;
+
+      padding: 1%;
+      text-align: center;
+    }
+
+    .div-four {
+      height: 7vh;
+      width: 15vw;
+      padding: 1%;
+
+      text-align: center;
+      margin-left: 15%;
+    }
+
+    /*  */
+
+    
+
+    /*  */
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Abel&family=Bungee+Shade&family=Londrina+Outline&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
 </head>
 
-<body class="main">
-    <div class="main-container">
-        <!-- First Division Start Here -->
-        <header>
-            <!-- Main Header Sart Here -->
-            <div class="logo-one">
-                <h1 style="margin-left: 80%;">Port<span style="color: rgba(11, 227, 251, 0.939);">folio</span></h1>
+<body style="margin: 0;scroll-behavior: smooth;">
+
+  <div id="Yash" class="main-container">
+
+    <nav id="home" class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+      <div style="background-image: url(./assets/image/banner.jpg);background-repeat: no-repeat;"
+        class="container-fluid">
+
+        <a class="navbar-brand" id="orderjuice"><img style="margin-left: 30%;"
+            src="file:///Users/enjoy_28_b/Downloads/fresh-master/images/logo.png" alt=""></a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div style="margin-left: 20%;color: white;font-size: 20px;" class="collapse navbar-collapse"
+          id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a style="color: purple;" class="nav-link active" aria-current="page" href="#home">Home</a>
+            </li>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+
+            <li class="nav-item">
+              <a style="color: purple;" class="nav-link active" aria-current="page" href="#about">About</a>
+            </li>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+
+            <li class="nav-item">
+              <a style="color: purple;" class="nav-link active" aria-current="page" href="#order">Order
+                Juice</a>
+            </li>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+
+            <li class="nav-item">
+              <a style="color: purple;" class="nav-link active" aria-current="page" href="#test">Testimonial</a>
+            </li>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+            <li class="nav-item">
+              <a style="color: purple;" class="nav-link active" aria-current="page" href="#contact">Contact
+                Us</a>
+            </li>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+
+
+    <div style="background-image: url(./assets/image/banner.jpg);background-repeat: no-repeat;margin-top:-3%;"
+      class="p-5 mb-4 bg-body-tertiary rounded-3">
+
+      <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold"><span style="color:#440e62; font-family: Poppins, sans-serif;">Welcome
+            to</span> <br>
+          <span style="color: white; font-family: Poppins, sans-serif;">Our Satyanam <br> Juice
+            Center, </span>
+        </h1>
+        <p style="color: white;margin: 5px;" class="col-md-8 fs-4">It is a long established fact that a reader will be
+          distracted by the readable content of a page when looking at its layout. The point of using
+          Ipsum is that</p>
+        <br>
+
+        <div class="buttn" style="padding: 1%;">Read More</div>
+
+
+
+        <div style="height: 50%;width: 50%;margin-left: 40%;
+                 margin-top: -7%;" id="carouselExampleCaptions" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img style="height: auto; width: auto;"
+                src="file:///Users/enjoy_28_b/Downloads/fresh-master/images/banner_img.png" class="d-block w-100"
+                alt="...">
+              <div class="carousel-caption d-none d-md-block">
+
+              </div>
             </div>
-            <!-- First Division -->
-            <nav class="upper-boxes">
-                <!-- Nav Section Start Here -->
-                <a href="./index.html">
-                    <h2 style="color: rgba(11, 227, 251, 0.939);">Home</h2>
-                </a>
-                <!-- Home  -->
-                <a href="./aboutme.html ">
-                    <h2>About</h2>
-                </a>
-                <!-- About -->
+            <div class="carousel-item">
+              <img src="file:///Users/enjoy_28_b/Downloads/fresh-master/images/banner_img.png" class="d-block w-100"
+                alt="...">
+              <div class="carousel-caption d-none d-md-block">
 
-                <!-- Services -->
-                <a href="./myprojects.html">
-                    <h2>Projects</h2>
-                </a>
-                <!-- Projects -->
-                <a href="./contact.html">
-                    <h2>Contact</h2>
-                </a>
-                <!-- Contacts -->
-            </nav>
-        </header>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="file:///Users/enjoy_28_b/Downloads/fresh-master/images/banner_img.png" class="d-block w-100"
+                alt="...">
+              <div class="carousel-caption d-none d-md-block">
 
-        <main>
-            <!-- Main Section Start Here -->
-            <section id="home" class="profile-section">
+              </div>
+            </div>
 
-                <img class="profile-picture"
-                    src="https://pics.craiyon.com/2023-10-02/84c2b043971049b1b8945ae0b7222ab4.webp"
-                    alt="Yash Dhage's profile picture">
-                <!-- Using Image Here -->
 
-                <h1 class="profile-name">It's <span style="color:rgba(11, 227, 251, 0.939) ;">Yash,</span></h1>
-                <h2 class="profile-title">I'm a <span style="color: rgba(11, 227, 251, 0.939);">Full Stack
-                        Developer.</span>
-                </h2>
-                <!-- Here Using Heading tag -->
 
-                <p class="profile-description">Passionate about creating efficient and user-friendly web applications.
-                    Experienced in both front-end and back-end technologies.</p>
-                <!-- Used Here Pragrapgh Tag -->
-                <div class="social-media">
-                    <!-- Second   Division Start Here For Icons -->
+          </div>
 
-                    <a href="https://github.com/YashDhage571/yashfullstackdeveloper1" class="social-icon"
-                        style="border-radius: 50%;"><i class='bx bxl-github'></i></a>
 
-                    <a href="https://www.linkedin.com/in/yash-dhage-b24743318/" class="social-icon"><i
-                            class='bx bxl-linkedin'></i></a>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
 
-                    <a href="#" class="social-icon"><i class='bx bxl-twitter'></i></a>
-                    <!-- Using Anchor   Tags  --> <br>
-                    <button class="content-one"><a style="text-decoration: none;" href="./resume.html">
-                            <h2 style="color: black;text-decoration: none;margin-top: 5px;"> Resume </h2>
-                        </a></button>
-                    <!-- Using Button Tag Here For Resume -->   
-                </div>
-                <br>
-                <hr>
-                <!-- Seocnd Division Is Closed Here --> 
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="sub-container">
+
+      <div class="sub-two"></div>
+      <div id="about" class="sub-three">
+
+        <div class="sub-three-one"></div>
+        <div class="sub-three-two">
+
+          <h2 style="font-family: monospace;text-align: center;"><b>About Us</b></h2>
+          <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;color: #5a5959;
+          font-size: 17px;
+          line-height: 32px;
+          font-weight: 300;
+          padding: 30px 0px 40px 0px;">
+            It is a long established fact
+            that a reader will be distracted by the readable content of a page when
+            looking at its layout. The point of using Lorem Ipsum t is a long established fact that a reader will be
+            distracted by the readable content of a page when looking at</p>
+          <div class="buttn" style="padding: 2.5%;">About More</div>
+
+        </div>
+
+
+
+      </div>
+
+      <div id="order" style="height: 100px;width: auto;">
+        <h1 style="text-align: center;font-family: monospace;"> <b>Our <span style="color: purple;">Juices</span></b>
+        </h1>
+        <hr style="margin-left: 40%;margin-right: 40%;border-width: 10px;margin-top: -1%;color: purple;">
+      </div>
+
+      <div class="sub-four">
+
+        <div class="sub-four-one">
+
+          <div class="price-one">
+
+            <h1 style="text-align: center;"><img height="40px" width="40px" style="margin-top: -2.5%;"
+                src="https://www.svgrepo.com/show/102228/pakistan-rupee-currency-symbol.svg" alt=""> : <span
+                style="color: #ffa30f;">30</span></h1>
+            <h3 style="text-align: center;color: rgb(0, 0, 0)"><span style="color: orange;">Orange </span> Juice</h3>
+
+
+            <p style="color: #5a5959;;text-align: center;">is a long established fact that a reader will be</p>
+            <div class="buttn" style="padding: 3%;margin-left: 23%;margin-top: 3.5%;"><a href="#orderjuice"
+                style="color: white; text-decoration: none;">Order Now</a></div>
+          </div>
+        </div>
+
+        <div class="sub-four-two">
+
+          <div class="price-two">
+            <h1 style="text-align: center;"><img height="40px" width="40px" style="margin-top: -2.5%;"
+                src="https://www.svgrepo.com/show/102228/pakistan-rupee-currency-symbol.svg" alt=""> : <span
+                style="color:#FFB200 ;"> 30</span></h1>
+
+            <h3 style="text-align: center;color: rgb(0, 0, 0);"><span style="color:#FFB200;">Sweet Lime (M o s
+                a m b i )</span> Juice
+            </h3>
+
+
+            <p style="color: #5a5959;;text-align: center;">is a long established fact that a reader will be</p>
+            <div class="buttn" style="padding: 3%;margin-left: 23%;margin-top: 3.5%;"><a href="#orderjuice"
+                style="color: white; text-decoration: none;">Order Now</a></div>
+          </div>
+        </div>
+
+
+        <div class="sub-four-three">
+
+          <div class="price-three">
+            <h1 style="text-align: center;"><img height="40px" width="40px" style="margin-top: -2.5%;"
+                src="https://www.svgrepo.com/show/102228/pakistan-rupee-currency-symbol.svg" alt=""> : <span
+                style="color: rgb(104, 2, 22) ;"> 50</span></h1>
+
+            <h3 style="text-align: center;color: rgb(0, 0, 0);"><span style="color: rgb(104, 2, 22);">Beet</span> Juice
+            </h3>
+
+
+            <p style="color: #5a5959;;text-align: center;">is a long established fact that a reader will be</p>
+            <div class="buttn" style="padding: 3%;margin-left: 23%;margin-top: 3.5%;"><a href="#orderjuice"
+                style="color: white; text-decoration: none;">Order Now</a></div>
+          </div>
+        </div>
+      </div>
+      <br><br>
+      <div class="sub-main-two">
+
+        <div class="sub-four-fifth">
+
+          <div class="price-five">
+
+            <h1 style="text-align: center;"><img height="40px" width="40px" style="margin-top: -2.5%;"
+                src="https://www.svgrepo.com/show/102228/pakistan-rupee-currency-symbol.svg" alt=""> : <span
+                style="color: rgb(104, 2, 22) ;"> 50</span></h1>
+
+            <h3 style="text-align: center;color: rgb(0, 0, 0);"><span style="color: rgb(104, 2, 22);">Pomegranate ( A n
+                a r)</span> Juice
+            </h3>
+
+
+            <p style="color: #5a5959;;text-align: center;">is a long established fact that a reader will be</p>
+
+            <div class="buttn" style="padding: 3%;margin-left: 23%;margin-top: 3.5%;"><a href="#orderjuice"
+                style="color: white; text-decoration: none;">Order Now</a></div>
+          </div>
+        </div>
+
+        <div class="sub-four-sixth">
+
+          <div class="price-six">
+
+            <h1 style="text-align: center;"><img height="40px" width="40px" style="margin-top: -2.5%;"
+                src="https://www.svgrepo.com/show/102228/pakistan-rupee-currency-symbol.svg" alt=""> : <span
+                style="color: rgb(209, 178, 5) ;"> 30</span></h1>
+
+            <h3 style="text-align: center;color: rgb(0, 0, 0);"><span style="color: rgb(209, 178, 5);">Pineapple</span>
+              Juice
+            </h3>
+
+
+            <p style="color: #5a5959;;text-align: center;">is a long established fact that a reader will be</p>
+
+            <div class="buttn" style="padding: 3%;margin-left: 23%;margin-top: 3.5%;"><a href="#orderjuice"
+                style="color: white; text-decoration: none;">Order Now</a></div>
+          </div>
+        </div>
+
+      </div>
+      <div id="test" class="sub-main-three">
+
+        <div class="main-three-one"></div>
+      </div>
+      <div class="sub-main-three-two">
+
+        <div id="contact" class="sub-main-three-second">
+          <h1
+            style="text-align: center;margin-top: 3%;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            C O N T A C T &nbsp; U S</h1>
+          <hr style="margin-left: 35%;margin-right: 35%;border: solid white;margin-top: -0.5%;">
+          <hr style="margin-left: 37%;margin-right: 47%;border: solid white;margin-top: -0.5%;">
+        </div>
+
+        <div class="sub-main-three-third">
+
+          <div class="col-md-12 ">
+            <input class="contactus" placeholder="Full Name" type="text" name="Full Name">
+            <input class="email" placeholder="Email" type="email" name="Full Name">
+
+            <input class="phone" placeholder="Contact Number" type="number" name="Full Name">
+            <input class="message" placeholder="Message" type="text" name="Full Name">
+          </div>
+
+          <div class="sub-main-three-fourth">
+
+            <div class="div-one">
+              <h5><img class="img-area-one" src="https://www.iconpacks.net/icons/2/free-location-icon-2955-thumb.png"
+                  alt=""> Location</h5>
+            </div>
+
+
+            <div class="div-two">
+              <h5><img class="img-area-two"
+                  src="https://w7.pngwing.com/pngs/598/408/png-transparent-computer-icons-mobile-phones-phone-miscellaneous-telephone-call-logo-thumbnail.png"
+                  alt=""> 9322493186</h5>
+            </div>
+
+            <div class="div-three">
+              <h5> <img class="img-area-three" src="./assets/image/email.png" alt=""> yash201@gmail.com</h5>
+            </div>
+
+
+
+            <div class="div-four">
+              <a style="color: black;text-decoration: none;" href="#Yash"><button class="send_btn" type="submit">S e n
+                  d</a></button>
+            </div>
+          </div>
+
+
+
+
+
+        </div>
+
+
+
+
+      </div>
+
+
+
+
+
+
 
 
     </div>
 
-    </section>
-    </main>
+
+
+
+
+
+  </div>
+
 
 </body>
 
